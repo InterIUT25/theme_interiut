@@ -1,7 +1,7 @@
 @use "bootstrap/scss/bootstrap" as * with (
   $primary: #6A0DAD,
   $secondary: #C58917,
-  $success: #3E2723,
+  $success: #28A745,
   $light: #F5F5DC,
   $dark: #1A1A1A,
   $gray-800: #2C2C2C,
@@ -79,7 +79,35 @@ body {
   color: $primary;
 }
 
-.btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+[data-bs-theme="light"] .challenge-button {
+  border: none;
+  box-shadow: 0 0 15px var(--bs-secondary);
+  background-color: $dark;
+
+  &.challenge-solved {
+    background-color: #29c830;
+
+    &:hover {
+      background-color: #37d63e;
+    }
+  }
 }
+
+[data-bs-theme="dark"] .challenge-button {
+  border: none;
+  background-color: $dark;
+
+  &:hover {
+    background-color: $dark;
+  }
+
+  &.challenge-solved {
+    background-color: #29c830;
+
+    &:hover {
+      background-color: #37d63e;
+    }
+  }
+}
+
+
